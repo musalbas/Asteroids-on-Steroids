@@ -3,13 +3,13 @@ Asteroids on Steroids
 
 Destroy your desktop by turning it into a game of Asteroids...
 
-./aos.py --screen
+`./aos.py --screen`
 
 <img src="https://musalbas.com/Asteroids-on-Steroids/gameplay_shot_1.png"/>
 
 ...or the president's face (or any other image that you specify).
 
-./aos.py obama.jpg
+`./aos.py obama.jpg`
 
 <img src="https://musalbas.com/Asteroids-on-Steroids/gameplay_shot_2.png"/>
 
