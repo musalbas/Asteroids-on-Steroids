@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+#
+# By the way, this is terrible code I wrote when I was 17.
+#
+
 # Define functions
 def calcTheoreticalPos(startTime, movePos, velocity):
     # Calculate the co-ordinates an object should be at based on the time, moving direction and velocity
@@ -81,7 +85,7 @@ def importMods(mods):
         print 'Missing module' + ('' if len(missingMods[0]) == 1 else 's') + ':'
         print ', '.join(missingMods[0])
         print
-        print 'You may install ' + ('the' if len(missingMods[0]) == 1 else 'these') + ' module' + ('' if len(missingMods[0]) == 1 else 's') + ' (on Raspbian/Debian-like distros) by running:'
+        print 'You may install ' + ('the' if len(missingMods[0]) == 1 else 'these') + ' module' + ('' if len(missingMods[0]) == 1 else 's') + ' (on Debian-based systems) by running:'
         print '\'sudo aptitude install ' + ' '.join(missingMods[1]) + '\''
         quit()
     elif extraMissingMods != []:
@@ -585,18 +589,17 @@ import argparse, os.path, sys
 if len(sys.argv) == 1:
     progPrefix = ('python ' if sys.argv[0][0] + sys.argv[0][1] != './' else '') + sys.argv[0]
     # I've textwrapped this manually to 80 characters per line for now, as I can't seem to get Python's textwrap module to wrap it elegantly
-    print """Asteroids - with an image of your choice! Pixel Piroid automagically identifies
-the different elements of your image (based on colour difference) and converts
-them to destroyable 'asteroids'. Destroy the asteroids before they destroy your
-ship.
+    print """Asteroids - with an image of your choice! Asteroids on Steroids automagically
+identifies the different elements of your image (based on colour difference)
+and converts them to destroyable 'asteroids'. Destroy the asteroids before they
+destroy your ship.
 
 Please specify the path of the image you'd like to destroy.
 i.e. """ + progPrefix + """ image-path
 
 Try the following for some examples:
 """ + progPrefix + """ --screen (Destroy your desktop/computer screen!)
-""" + progPrefix + """ rasp.png (RPi logo)
-""" + progPrefix + """ rasp.png -cp 2 -bg 0 0 0 -ck2 255 255 255 (RPi logo)
+""" + progPrefix + """ obama.jpg (President's face)
 
 You're encouraged to experiment with your own images, including photographs. See
 below for adjusting element identification.
@@ -616,7 +619,7 @@ Run '""" + progPrefix + """ -h' for extra help, or see readme.txt."""
 replaceLowerArgs(('--prankMode', '--screensaverMode'))
 
 argparser = argparse.ArgumentParser(
-    description = 'Asteroids - with an image of your choice! Pixel Piroid automagically identifies the different elements of your image (based on colour difference) and converts them to destroyable \'asteroids\'. Destroy the asteroids before they destroy your ship.',
+    description = 'Asteroids - with an image of your choice! Asteroids on Steroids automagically identifies the different elements of your image (based on colour difference) and converts them to destroyable \'asteroids\'. Destroy the asteroids before they destroy your ship.',
     epilog = 'Use the LEFT mouse button to destroy existing asteroids. Use the RIGHT mouse button to create new asteroids from the image. Press ESC to exit fullscreen mode. Press C or SHIFT to launch the mega bullet. Use WASD/arrow keys to move.'
 )
 
@@ -1520,7 +1523,7 @@ loadSrcImg()
 updTermLine('Loading game...')
 if args.monitorResolution != 1:
     pygame.init()
-pygame.display.set_caption('Pixel Piroid | Asteroids - with an image of your choice!')
+pygame.display.set_caption('Asteroids on Steroids | Asteroids - with an image of your choice!')
 fpsClock = pygame.time.Clock()
 
 # Set cursor
@@ -1914,5 +1917,4 @@ while True:
 # "Sssssssssssssssssssssss..." (Real python language...)
 
 # By Mustafa Al-Bassam
-# Licence: Do whatever you want with it.
 # ??-08-12
