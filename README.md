@@ -5,13 +5,13 @@ Destroy your desktop by turning it into a game of Asteroids...
 
 `./aos.py --screen`
 
-<img src="https://musalbas.com/Asteroids-on-Steroids/gameplay_shot_1.png"/>
+<img src="https://musalbas.com/img/Asteroids-on-Steroids/gameplay_shot_1.png"/>
 
 ...or the president's face (or any other image that you specify).
 
 `./aos.py obama.jpg`
 
-<img src="https://musalbas.com/Asteroids-on-Steroids/gameplay_shot_2.png"/>
+<img src="https://musalbas.com/img/Asteroids-on-Steroids/gameplay_shot_2.png"/>
 
 Asteroids on Steroids is a variation of the classic 'Asteroids' arcade game, with a unique twist. Instead of destroying space asteroids, you can destroy automatically-identified elements of any image you specify.
 
